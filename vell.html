@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>VellCríticas - Início</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #2069b3;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .filme {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .filme h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .nota {
+      color: #f39c12;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .resumo {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .link-critica a {
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: bold;
+    }
+
+    .link-critica a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>VellCrítica</h1>
+    <p>As melhores análises de filmes para todos os gostos</p>
+  </header>
+
+  <div class="container">
+
+    <div class="filme">
+      <h2>A Noite Devora o Mundo (2018)</h2>
+      <div class="nota">★★★★☆ (4/5)</div>
+      <div class="resumo">Um apocalipse silencioso abala Paris, enquanto um homem precisa lidar com a solidão e o medo.</div>
+      <div class="link-crítica"><a href="#" onclick="mostrarCritica(this); return false;">Ler crítica completa →</a></div>
+      <div class="critica-completa" style="display: none;">
+        <p>Um olhar íntimo sobre o isolamento, "A Noite Devora o Mundo" foge dos clichês dos filmes de zumbi. A narrativa silenciosa e introspectiva convida o espectador a mergulhar na mente de um sobrevivente solitário. A ausência de diálogos acentua o desconforto e a tensão psicológica.</p>
+        <p>Visualmente atmosférico e reflexivo, o filme é mais uma meditação sobre a solidão do que uma típica história de terror.</p>
+      </div>
+    </div>
+
+    <div class="filme">
+      <h2>Oppenheimer (2023)</h2>
+      <div class="nota">★★★★★ (5/5)</div>
+      <div class="resumo">Christopher Nolan entrega uma obra épica e densa sobre o criador da bomba atômica.</div>
+      <div class="link-crítica"><a href="#" onclick="mostrarCritica(this); return false;">Ler crítica completa →</a></div>
+      <div class="critica-completa" style="display: none;">
+        <p>"Oppenheimer" é uma obra que mescla biografia, drama e tensão política com maestria. A direção firme de Nolan, aliada a uma trilha sonora marcante e atuações intensas, especialmente de Cillian Murphy, torna o filme uma experiência cinematográfica profunda e provocadora.</p>
+        <p>O roteiro equilibra ciência e emoção, mostrando as consequências morais e pessoais da criação da bomba atômica. A montagem não-linear exige atenção, mas recompensa o espectador com reflexões complexas sobre poder, responsabilidade e sacrifício.</p>
+      </div>
+    </div>
+
+    <div class="filme">
+      <h2>Barbie (2023)</h2>
+      <div class="nota">★★★☆☆ (3/5)</div>
+      <div class="resumo">Colorido, divertido e com críticas sociais sutis — Barbie surpreende e divide opiniões.</div>
+      <div class="link-crítica"><a href="#" onclick="mostrarCritica(this); return false;">Ler crítica completa →</a></div>
+      <div class="critica-completa" style="display: none;">
+        <p>"Barbie" é uma sátira visualmente exuberante que transita entre humor leve e críticas sociais relevantes. A direção de Greta Gerwig dá profundidade a personagens originalmente rasos, abordando temas como identidade, feminismo e consumismo com uma abordagem acessível.</p>
+        <p>Apesar de alguns exageros e momentos confusos, o filme se destaca pela coragem de reinventar um ícone da cultura pop.</p>
+      </div>
+    </div>
+
+    <div class="filme">
+      <h2>Duna: Parte Dois (2024)</h2>
+      <div class="nota">★★★★☆ (4/5)</div>
+      <div class="resumo">Denis Villeneuve continua a saga com cenas grandiosas e um universo ricamente construído.</div>
+      <div class="link-crítica"><a href="#" onclick="mostrarCritica(this); return false;">Ler crítica completa →</a></div>
+      <div class="critica-completa" style="display: none;">
+        <p>Com visual impressionante e fidelidade ao material original, "Duna: Parte Dois" amplia o universo estabelecido no primeiro filme. A direção de Villeneuve é ambiciosa, entregando cenas épicas e aprofundando as intrigas políticas e os dilemas espirituais de Paul Atreides.</p>
+        <p>Embora extenso, o ritmo é bem equilibrado, com atuações poderosas e um senso de escala raramente visto no cinema atual.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 VellCrítica. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function mostrarCritica(link) {
+      const critica = link.parentElement.nextElementSibling;
+      if (critica.style.display === "none") {
+        critica.style.display = "block";
+        link.textContent = "Ocultar crítica ↑";
+      } else {
+        critica.style.display = "none";
+        link.textContent = "Ler crítica completa →";
+      }
+    }
+  </script>
+
+</body>
